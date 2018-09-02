@@ -12,7 +12,12 @@ class HeaderPage {
         return element(by.css(administrationMenuLocator));
     }
     
+    async waitForHeaderAvailable() {
+        await borwser.wait(protractor.ExpectedConditions.visibilityOf(this.getAdministrationMenu()), 15000);
+    }
+
     async isHeaderVisible() {
+        await this.waitForHeaderAvailable();
         return await this.getProductsMenu().isDisplayed() 
         && await this.getAdministrationMenu().isDisplayed();
     }
