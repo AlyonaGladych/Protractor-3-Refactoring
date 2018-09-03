@@ -6,9 +6,10 @@ describe('login suite', function() {
 
       await loginPage.open();
       let productsPage = await loginPage.login("alyonagladych@gmail.com", "x&b*zmzA^oj");
-      
+
+      console.log(productsPage.header + '####################################');
       await browser.sleep(3000);
   
-      expect(productsPage.header.isHeaderVisible()).toEqual(true);
+     expect(await productsPage.header.isHeaderVisible()).toEqual(true);
     });
   });
