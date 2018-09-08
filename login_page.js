@@ -1,4 +1,5 @@
 let ProductsPage = require("./products_page.js");
+//let newProductPage = require("./newProduct_page.js");
 
 let loginBtnLocator = ".login-panel .login-button";
 let emailInputLocator = "#email";
@@ -39,7 +40,5 @@ class LoginPage {
     }
 
 }
-
-
 
 module.exports = LoginPage;
